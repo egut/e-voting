@@ -57,7 +57,7 @@ Med anledning av ovanstående yrkar vi:
 
 ---
 
-## Bilaga 1: Förslag till stadgeändringar (Kapitel 5)
+## Bilaga 1: Förslag till stadgeändringar
 
 Nedan följer de specifika ändringar i stadgarna som krävs för att möjliggöra
 beslutet. All text rörande pappersbaserad poströstning stryks.
@@ -206,15 +206,20 @@ måste systemet upphandlas och designas för att motstå följande hotscenarier:
 
 ### Scenario 1: Inifrån-attack ("Rogue Admin" / Korrupt ledning)
 
-**Beskrivning:** Personer med administrativ makt (t.ex. i styrelsen eller
+#### Beskrivning
+
+Personer med administrativ makt (t.ex. i styrelsen eller
 IT-ansvariga) försöker manipulera valet för egen vinning, exempelvis för att
 få igenom ansvarsfrihet eller dölja ekonomiska oegentligheter.
-**Risker:**
+
+#### Risker
 
 - Databasmanipulation: Ändring av lagda röster i systemets databas.
 - "Tjuvkikning": Administratörer ser röstningstrender i förväg och anpassar
   årsmötets debatt eller ställer in mötet på falska tekniska grunder.
-  **Skyddsmekanismer (Krav på systemet):**
+
+#### Skyddsmekanismer (Krav på systemet)
+
 - **Zero-Knowledge / Kryptografisk låsning:** Den digitala valurnan ska vara
   krypterad med en nyckel som delas ut/aktiveras först när mötesordföranden
   stänger omröstningen. Ingen ska kunna se preliminära resultat.
@@ -224,16 +229,21 @@ få igenom ansvarsfrihet eller dölja ekonomiska oegentligheter.
 
 ### Scenario 2: Koordinerad minoritet ("Digital Flash Mob" / Röstfiske)
 
-**Beskrivning:** En liten grupp medlemmar försöker kuppa in en specifik
+#### Beskrivning
+
+En liten grupp medlemmar försöker kuppa in en specifik
 kandidat i styrelsen, vilket historiskt varit möjligt vid fysiska årsmöten
 med lågt deltagande.
-**Risker:**
+
+#### Risker
 
 - Digitalt röstfiske: Medlemmar övertalas att lämna ifrån sig sina
   inloggningsuppgifter ("ge mig ditt lösenord så röstar jag åt dig").
 - Sista-minuten-attack: Gruppen massröstar i slutet av debatten innan övriga
   medlemmar hinner reagera.
-  **Skyddsmekanismer (Krav på systemet):**
+
+#### Skyddsmekanismer (Krav på systemet)
+
 - **Stark Autentisering:** Inloggning ska ske via Freja eID+ som verifierar
   medlemmar mot personnummer i medlemsregistret. För utländska medlemmar utan
   svenskt personnummer krävs manuellt godkännande av valkommittén innan
@@ -245,15 +255,20 @@ med lågt deltagande.
 
 ### Scenario 3: Tredjepartsrisk (Kompomprometterad leverantör)
 
-**Beskrivning:** Företaget (SaaS-bolaget) som levererar röstningsplattformen
+#### Beskrivning
+
+Företaget (SaaS-bolaget) som levererar röstningsplattformen
 drabbas av ett dataintrång, eller en oärlig anställd hos leverantören
 manipulerar utfallet.
-**Risker:**
+
+#### Risker
 
 - Leverantören läcker information om vem som röstat på vad (brott mot
   anonymiteten).
 - Utländska statsaktörer eller hackare ändrar valresultatet via leverantören.
-  **Skyddsmekanismer (Krav på systemet):**
+
+#### Skyddsmekanismer (Krav på systemet)
+
 - **End-to-End Verifiability (E2E-V):** Systemet bör erbjuda matematisk
   verifierbarhet. Detta innebär att en medlem, med hjälp av en personlig
   kvittokod, själv kan verifiera att just deras röst har räknats korrekt i
@@ -263,14 +278,19 @@ manipulerar utfallet.
 
 ### Scenario 4: Tekniskt haveri eller Överbelastningsattack (DDoS)
 
-**Beskrivning:** Röstningssystemet går ner, antingen på grund av hög
+#### Beskrivning
+
+Röstningssystemet går ner, antingen på grund av hög
 belastning när hundratals medlemmar loggar in samtidigt, eller på grund av
 en illvillig överbelastningsattack riktad för att sabotera årsmötet.
-**Risker:**
+
+#### Risker
 
 - Medlemmar kan inte avge sina röster.
 - Omröstningen måste avbrytas och årsmötets beslut ogiltigförklaras.
-  **Skyddsmekanismer (Processkrav):**
+
+#### Skyddsmekanismer (Processkrav)
+
 - **Robust infrastruktur:** Leverantören måste kunna garantera
   skalbarhet och ha DDoS-skydd (t.ex. Cloudflare).
 - **Fall-back i stadgar/ordningsregler:** Mötesordföranden måste ha tydligt
@@ -279,13 +299,18 @@ en illvillig överbelastningsattack riktad för att sabotera årsmötet.
 
 ### Scenario 5: Otillbörlig påverkan ("Påtryckning i hemmet")
 
-**Beskrivning:** En medlem blir utsatt för påtryckningar av en partner,
+#### Beskrivning
+
+En medlem blir utsatt för påtryckningar av en partner,
 släkting eller vän som står bredvid skärmen och tvingar personen att rösta
 på ett specifikt sätt (Coercion/Family voting).
-**Risker:**
+
+#### Risker
 
 - Brott mot valhemligheten och den fria viljan.
-  **Skyddsmekanismer (Processkrav):**
+
+#### Skyddsmekanismer (Processkrav)
+
 - **Obegränsade ändringar under röstningsperioden:** Den internationella
   standarden för att motverka detta (används bl.a. i Estlands nationella
   e-val) är att tillåta väljaren att ändra sin förtidsröst obegränsat
