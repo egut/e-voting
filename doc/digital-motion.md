@@ -52,19 +52,16 @@ Med anledning av ovanstående yrkar vi:
 
 1. **Att** Mensa Sverige helt avskaffar den pappersbaserade poströstningen
    till förmån för ett digitalt röstningssystem.
-2. **Att** medlemmar ges tillgång till digitalt förtidsröstningssystem och kan börja
-   förtidsrösta samtidigt som årsmötets dagordning och handlingar görs
-   tillgängliga (senast 4 veckor innan årsmötet enligt § 5.2.4).
-3. **Att** en digital förtidsröst fritt ska kunna ändras fram till
-   ordförandens klubbslag i respektive fråga på årsmötet (vid digital röstning under mötet) eller till mötets öppnande (vid manuell röstning under mötet).
-4. **Att** styrelsen inför varje årsmöte beslutar om röstning under mötet ska ske digitalt eller manuellt, vilket ger flexibilitet och säkerhetsventil.
-5. **Att** röstlängden baseras på närvarande medlemmar (fysiskt eller digitalt) samt godkända förtidsröster.
-6. **Att** stadgarna uppdateras i enlighet med "Bilaga 1" nedan för att
+2. **Att** styrelsen ges i uppdrag att införa ett digitalt röstningssystem för förtidsröstning
+   och eventuellt även för röstning under mötet.
+3. **Att** styrelsen ges i uppdrag att stadgarna uppdateras i enlighet med förslaget i "Bilaga 1" nedan för att
    möjliggöra denna förändring.
+4. **Att** bilagorna 2-5 utgör rekommendationer och vägledning för styrelsens arbete
+   med att införa systemet, men inte är bindande krav.
 
 ---
 
-## Bilaga 1: Förslag till stadgeändringar
+## Bilaga 1a: Förslag till stadgeändringar (Svenska)
 
 Nedan följer de specifika ändringar i stadgarna som krävs för att möjliggöra
 beslutet.
@@ -135,7 +132,93 @@ Det digitala röstningssystemet skall garantera anonymitet genom att information
 
 ---
 
-## Bilaga 2: Övergångsbestämmelser
+## Bilaga 1b: Engelska versionen av stadgeändringarna
+
+Eftersom Mensa Sveriges stadgar finns på både svenska och engelska
+
+### Amendment of § 5.2.3 (Second notification)
+
+**Current text:**
+This notification shall contain all relevant background documentation and postal ballots for the issues on the agenda.
+
+**Proposed new text:**
+This notification shall contain all relevant background documentation and information about advance voting for all relevant issues on the agenda.
+
+---
+
+### Amendment of § 5.5.1 (Voting list)
+
+**Current text:**
+In order for an Annual General Meeting or an extraordinary General Meeting to be considered duly convened, a voting list must be prepared. The voting list must contain the names of all present members entitled to vote, the names from approved postal votes and the names of those who have voted digitally. Only those members included in the voting list have the right to vote, speak or forward referendum issues.
+
+**Proposed new text:**
+In order for an Annual General Meeting or an extraordinary General Meeting to be considered duly convened, a voting list must be prepared. The voting list must contain the names of all present members entitled to vote and the names from approved advance votes. Present is defined as physically present in the meeting venue or digitally present via the association's voting system. Only those members included in the voting list have the right to vote, speak or forward referendum issues.
+
+---
+
+### Amendment of § 5.5.3 (Requirement for constituting a quorum)
+
+**Current text:**
+In order for the annual meeting to be decisive, it is required that a majority of the members on the voting list cast a vote (yes, no or abstain).
+
+**Proposed new text:**
+In order for the annual meeting to be decisive, it is required that a majority of the members on the voting list cast a vote (yes, no or abstain) in each individual issue.
+
+---
+
+### Amendment of § 5.5.12 (Postal voting) - Replaced with Advance voting
+
+**Current text:**
+The Election Committee must receive votes by postal ballot no later than one week before the General Meeting. The postal votes are kept unopened until the beginning of the annual meeting. Members having voted by postal ballot, that decide to vote at the General Meeting, are responsible for informing the Election Committee before the meeting is declared open. Their postal ballots will then be destroyed, and their postal ballot votes become void.
+
+**Proposed new text:**
+Advance voting shall be conducted via the association's digital voting system. The system for advance voting shall be opened simultaneously with the distribution of the second notification. A cast advance vote may be freely changed by the member. In case of digital voting during the meeting, an advance vote may be changed until the meeting chairperson declares the voting closed. In case of manual voting during the meeting, advance voting closes when the meeting is opened. Members who are physically present during manual voting shall be registered by the Election Committee and their advance vote becomes void.
+
+---
+
+### New paragraph § 5.5.X (Selection of voting method)
+
+**Current text:**
+No corresponding paragraph exists.
+
+**Proposed new text:**
+The Board shall decide before each General Meeting whether voting during the meeting shall be conducted digitally or manually. The decision shall be made no later than sixteen weeks before the General Meeting and communicated in the first notification. Advance voting is always conducted digitally. In case of manual voting during the meeting, only physically present members may vote. In case of digital voting during the meeting, both physically and digitally present members may vote.
+
+---
+
+### Amendment of § 5.6 (Counting of votes)
+
+**Current text:**
+The Election Committee is responsible for appointing an independent body (which may include members of the Election Committee) to receive, count and certify results of the voting. The Election Committee is responsible for keeping this information available only to them and may not reveal information about the results of the postal voting until the moment of counting of votes for each individual referendum. This principal ensures that in order to win, a candidate requires a majority of the votes cast in the election, no just the largest number. Voters mark ballots by assigning ranks to candidates according to preference. If no majority is achieved, the candidate with the lowest number of votes is eliminated and the second choice on the ballots with their candidate as the primary choice is distributed to the remaining candidates. This is continued until a candidate achieves a majority of the votes cast. In case the total number of votes is equal, the candidate with the highest number of primary votes is elected. In case of the number of primary votes is equal as well, the candidate with the highest number of secondary votes is elected, etc. If two or more candidates end up with exactly the same number of votes in all categories, the election is declared a tie. The Election Committee, taking advice from the candidates in question, will then decide whether to draw a winner, or hold another election for the relevant office. Each candidate or group of candidates on the ballot may designate a representative to observe the counting of the votes. The Election Committee shall cause notification to be published to the Board, the Editor, the office of Mensa International and all the candidates of the number of votes cast for each candidate no later than two (2) weeks after the General Meeting.
+
+**Proposed new text:**
+The Election Committee is responsible for appointing an independent body (which may include members of the Election Committee) to receive, count and certify results of the voting. **In case of digital voting, vote counting is performed via the digital voting system. The Board is responsible for ensuring that the system is tested and security audited before use. Test results shall be reported to the General Meeting. No data linking a specific member's identity to a specific vote may be stored permanently after the General Meeting minutes have been approved.** The Election Committee is responsible for keeping this information available only to them and may not reveal information about the results of the **advance voting** until the moment of counting of votes for each individual referendum. This principal ensures that in order to win, a candidate requires a majority of the votes cast in the election, no just the largest number. Voters mark ballots by assigning ranks to candidates according to preference. If no majority is achieved, the candidate with the lowest number of votes is eliminated and the second choice on the ballots with their candidate as the primary choice is distributed to the remaining candidates. This is continued until a candidate achieves a majority of the votes cast. In case the total number of votes is equal, the candidate with the highest number of primary votes is elected. In case of the number of primary votes is equal as well, the candidate with the highest number of secondary votes is elected, etc. If two or more candidates end up with exactly the same number of votes in all categories, the election is declared a tie. The Election Committee, taking advice from the candidates in question, will then decide whether to draw a winner, or hold another election for the relevant office. Each candidate or group of candidates on the ballot may designate a representative to observe the counting of the votes. The Election Committee shall cause notification to be published to the Board, the Editor, the office of Mensa International and all the candidates of the number of votes cast for each candidate no later than two (2) weeks after the General Meeting.
+
+---
+
+### New paragraph § 5.X (Technical failure)
+
+**Current text:**
+No corresponding paragraph exists.
+
+**Proposed new text:**
+In case of technical failure with the digital voting system, the meeting chairperson has the authority to extend voting time, pause the meeting, or decide on manual voting for the current issue. In case of interruptions longer than thirty minutes, approval by the meeting with simple majority is required. All decisions according to this paragraph shall be documented in the minutes.
+
+---
+
+### New paragraph § 5.Y (Security and audit)
+
+**Current text:**
+No corresponding paragraph exists.
+
+**Proposed new text:**
+The digital voting system shall guarantee anonymity by storing information about who voted and what they voted for separately. The system shall log administrative changes and technical events. The Auditor and Ombudsman have the right to review logs but may not access information linking specific members to specific votes. In case of suspected election fraud, the General Meeting may decide on an investigation with a two-thirds majority.
+
+---
+
+## Bilaga 2: Övergångsbestämmelser (Rekommendation)
+
+Följande övergångsbestämmelser rekommenderas för att säkerställa en trygg och kontrollerad införande av det digitala röstningssystemet.
 
 ### § 1 - Första användning
 
@@ -151,9 +234,9 @@ Manuell röstning skall alltid vara möjlig som reserv vid tekniskt haveri. Vid 
 
 ---
 
-## Bilaga 3: Styrelsens ansvar och subdokument
+## Bilaga 3: Styrelsens ansvar och subdokument (Rekommendation)
 
-Styrelsen skall upprätta följande subdokument för det digitala röstningssystemet:
+Styrelsen rekommenderas att upprätta följande subdokument för det digitala röstningssystemet:
 
 1. Riktlinjer för autentisering och medlemsverifiering
 2. Testnings- och säkerhetskrav
@@ -164,12 +247,9 @@ Subdokumenten skall vara tillgängliga för alla medlemmar och rapporteras till 
 
 ---
 
-## Bilaga 4: Hotmodellering och Riskanalys (Threat Modeling)
+## Bilaga 4: Hotmodellering och Riskanalys (Rekommendation)
 
-Införandet av ett digitalt röstningssystem skiftar föreningens sårbarheter
-från fysiska risker (exempelvis lågt valdeltagande och poströster som
-försvinner) till tekniska risker. För att garantera en rättssäker process
-måste systemet upphandlas och designas för att motstå följande hotscenarier:
+Följande hotmodellering och riskanalys rekommenderas att beaktas vid införandet av ett digitalt röstningssystem. Systemet bör upphandlas och designas för att motstå följande hotscenarier:
 
 ### Scenario 1: Inifrån-attack ("Rogue Admin" / Korrupt ledning)
 
@@ -288,7 +368,7 @@ på ett specifikt sätt (Coercion/Family voting).
 ## Bilaga 5: Tekniska rekommendationer och implementationsguide
 
 Denna bilaga innehåller tekniska rekommendationer för hur det digitala röstningssystemet
-bör implementeras för att uppfylla stadgarnas krav och säkerställa rättssäkerhet.
+kan implementeras för att uppfylla stadgarnas krav och säkerställa rättssäkerhet. Dessa rekommendationer är vägledande och inte bindande.
 
 ### 1. Autentisering och medlemsverifiering
 
