@@ -34,9 +34,9 @@ docker-compose up -d
 
 The system will be available at:
 
-- Frontend: http://localhost:80 (via Caddy)
-- Backend API: http://localhost:3000
-- Direct Frontend: http://localhost:8080
+- Frontend: <http://localhost:80> (via Caddy)
+- Backend API: <http://localhost:3000>
+- Direct Frontend: <http://localhost:8080>
 
 ### Local Development
 

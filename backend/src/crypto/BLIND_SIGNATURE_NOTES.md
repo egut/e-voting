@@ -61,5 +61,5 @@ Before production deployment:
 ### References
 
 - Chaum, D. (1983). "Blind signatures for untraceable payments"
-- RSA Blind Signatures: https://en.wikipedia.org/wiki/Blind_signature
-- Node.js Crypto Documentation: https://nodejs.org/api/crypto.html
+- RSA Blind Signatures: <https://en.wikipedia.org/wiki/Blind_signature>
+- Node.js Crypto Documentation: <https://nodejs.org/api/crypto.html>
