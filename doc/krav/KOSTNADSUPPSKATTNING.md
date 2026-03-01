@@ -176,10 +176,10 @@
 
 ## 8. Total kostnad för första året (exempel)
 
-### 8.1 Medelstor förening (Mensa Sverige)
+### 8.1 Medelstor förening (500 medlemmar)
 
 - Hosting (VPS): 2 400 kr/år
-- Föreningshuset API: 1 200 kr/år
+- Medlemsregister API: 1 200 kr/år
 - Domän: 150 kr/år
 - E-post: 0 kr (gratisnivå)
 - Säkerhetsgranskning (engångskostnad): 15 000 kr
@@ -195,7 +195,7 @@
 
 ## 9. ROI-kalkyl (Return on Investment)
 
-### 9.1 Mensa Sverige (500 medlemmar)
+### 9.1 Exempel: Förening med 500 medlemmar
 
 **Nuvarande kostnad (poströstning):**
 
@@ -238,15 +238,15 @@
 
 ### 10.2 Projektbidrag
 
-- Ansök om bidrag från Mensa International
+- Ansök om bidrag från internationella organisationer (om tillämpligt)
 - Ansök om innovationsbidrag från svenska myndigheter
 - Crowdfunding från medlemmar
 
 ### 10.3 Delad kostnad
 
-- Flera Mensa-föreningar delar på utvecklingskostnad
-- Nordiskt samarbete (Sverige, Norge, Danmark, Finland)
-- Europeiskt samarbete via Mensa Europe
+- Flera föreningar delar på utvecklingskostnad
+- Regionalt samarbete (t.ex. nordiskt samarbete)
+- Internationellt samarbete via paraplyorganisationer
 
 ### 10.4 Sponsring
 

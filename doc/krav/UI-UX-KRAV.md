@@ -1,4 +1,4 @@
-# UI/UX-krav: Digitalt röstningssystem för Mensa Sverige
+# UI/UX-krav: Digitalt röstningssystem
 
 ## 1. Översikt
 
@@ -147,16 +147,16 @@ Systemet kommer med fördefinierade tema-mallar som föreningar kan välja och a
 
 **Kategori 2: Balanserade (Professionella men vänliga)**
 
-**4. Mensa Classic (Standard för Mensa Sverige)**
+**4. Klassisk (Standard)**
 
-- Primärfärg: #DC2626 (Mensa-röd)
+- Primärfärg: #DC2626 (Röd)
 - Sekundärfärg: #1F2937 (Mörk grå)
 - Typsnitt: Inter
 - Rundade hörn: 8px
 - Animationer: Medel (fade + scale)
-- Ikoner: Hjärna, lampa, pussel
+- Ikoner: Klassiska ikoner
 - Playfulness: 4/10
-- Användning: Mensa-föreningar
+- Användning: Traditionella föreningar
 
 **5. Modern Purple**
 
@@ -745,7 +745,7 @@ Kan aktiveras/inaktiveras i inställningar.
 **E-postmall (Magic Link):**
 
 ```
-Ämne: Logga in på [Mötesnamn] - Mensa Sverige
+Ämne: Logga in på [Mötesnamn] - [Föreningsnamn]
 
 Hej [Namn],
 
@@ -819,7 +819,7 @@ Med vänliga hälsningar,
 
 **Kontaktinfo:**
 
-- E-post: support@mensa.se
+- E-post: support@[förening].se
 - Telefon: [Nummer] (endast under mötet)
 - Valkommittén: Vid entrén
 
@@ -1524,7 +1524,7 @@ Om > 25% har låg säkerhetsnivå:
 
 **Bra:**
 
-- "Något gick fel när din röst skulle sparas. Kontrollera din internetanslutning och försök igen. Om problemet kvarstår, kontakta support@mensa.se"
+- "Något gick fel när din röst skulle sparas. Kontrollera din internetanslutning och försök igen. Om problemet kvarstår, kontakta support@[förening].se"
 
 ### 11.2 Toast-meddelanden
 
@@ -1553,7 +1553,7 @@ Om > 25% har låg säkerhetsnivå:
 **Exempel:**
 
 - Inga kandidater: "Inga kandidater har lagts till än. Klicka på 'Lägg till kandidat' för att komma igång."
-- Inga handlingar: "Inga handlingar uppladdade. Handlingar kommer att publiceras senast 4 veckor före mötet."
+- Inga handlingar: "Inga handlingar uppladdade. Handlingar kommer att publiceras enligt föreningens stadgar."
 
 ### 11.4 Laddningstillstånd
 
@@ -1784,7 +1784,7 @@ Om > 25% har låg säkerhetsnivå:
 
 **Framtida språk:**
 
-- Finska, Norska, Danska (nordiska Mensa-föreningar)
+- Finska, Norska, Danska (nordiska föreningar)
 
 ### 16.2 Implementation
 
@@ -1975,5 +1975,5 @@ Om > 25% har låg säkerhetsnivå:
 
 **Dokumentversion**: 1.0
 **Datum**: 2026-02-25
-**Författare**: Systemspecifikation för Mensa Sverige
+**Författare**: Systemspecifikation för digitalt röstningssystem
 **Status**: Utkast för granskning

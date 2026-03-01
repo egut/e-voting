@@ -1,5 +1,37 @@
 # Ändringslogg: Kravspecifikation
 
+## 2024-03-01: Generalisering av krav
+
+### Sammanfattning
+
+Alla krav har generaliserats för att vara tillämpliga på alla typer av föreningar, inte bara specifika organisationer. Föreningsspecifika detaljer har ersatts med generella referenser till "föreningens stadgar".
+
+### Ändringar
+
+**Generalisering av referenser:**
+
+- Ersatt specifika paragrafnummer (§ 5.2.4, § 5.6, § 5.7, § 5.9) med "enligt föreningens stadgar"
+- Ersatt specifika tidsangivelser (4 veckor, 8 veckor) med "enligt föreningens stadgar"
+- Ersatt organisationsspecifika namn med generella termer
+- Ersatt specifika färger och ikoner med generella alternativ
+
+**Uppdaterade dokument:**
+
+- FUNKTIONELLA-KRAV.md: Generaliserade tidslinje, närvarodefinition, tekniskt haveri
+- ANALYS-OCH-BRISTER.md: Ändrade "Analys 3" från organisationsspecifik till "Brister för specifika föreningstyper"
+- UI-UX-KRAV.md: Generaliserade tema-namn och kontaktinformation
+- ARBETSFLODE.md: Generaliserade föreningsnamn och tidsangivelser
+- PRESTANDA-OCH-TEKNISKA-KRAV.md: Generaliserade drifttider
+- WIZARD-OCH-ANVANDARVANLIGHET.md: Generaliserade standardvärden
+- ROSTNING-OCH-VALMETODER.md: Generaliserade dagordningsändringar
+- PLAYFULNESS-OCH-TEMAN.md: Generaliserade tema-namn
+- KOSTNADSUPPSKATTNING.md: Generaliserade exempel och samarbeten
+- README.md: Uppdaterade beskrivningar
+
+**Motivering:**
+
+Systemet är designat för att kunna användas av alla typer av föreningar. Genom att generalisera kraven blir det tydligt att systemet är flexibelt och kan anpassas till olika föreningars behov och stadgar.
+
 ## 2024-02-28: Omstrukturering och utökning av krav
 
 ### Sammanfattning
@@ -436,3 +468,133 @@ doc/
 2. **Tydligare struktur**: Separation mellan krav och referensdokument
 3. **Lättare att underhålla**: En mapp att fokusera på
 4. **Bättre översikt**: `doc/krav/README.md` ger komplett översikt
+
+## 2024-02-28 (sist): Wizard och analys av brister
+
+### Sammanfattning
+
+Lagt till wizard-specifikation för att göra systemet extremt enkelt att använda (eftersom det endast används en gång om året). Genomfört tre analyser för att identifiera brister i systemet.
+
+### Nya filer
+
+#### 1. WIZARD-OCH-ANVANDARVANLIGHET.md
+
+**Uppsättningswizard för årsmöte (8 steg):**
+
+1. Grundinformation (namn, datum, tid, plats)
+2. Dagordning (standardmall, importera, eller bygg från scratch)
+3. Anpassa dagordning (drag-and-drop, valmetod per punkt)
+4. Ladda upp handlingar (automatisk koppling till dagordningspunkter)
+5. Kandidater (profilbild, presentation)
+6. Förtidsröstning (öppna/stäng datum, påminnelser)
+7. Röstning under mötet (digital/manuell, distansdeltagande)
+8. Granska och aktivera (checklista, testläge)
+
+**Wizards för andra funktioner:**
+
+- Lägg till kandidat (3 steg)
+- Sätta upp autentisering (5 steg)
+- Sätta upp backup (4 steg)
+
+**Inbyggd säkerhet (osynlig för användaren):**
+
+- Automatiska säkerhetskontroller vid uppsättning
+- Automatiska varningar till mötessamordnare och teknisk ansvarig
+- Automatiska åtgärder vid tekniskt haveri och säkerhetsincident
+
+**Användarvänlighet:**
+
+- Kontextuell hjälp överallt
+- Interaktiva guider för nya användare
+- Video-tutorials
+- Automatisk sparning och ångra/gör om
+- Tydliga felmeddelanden med lösningar
+- Rollspecifik onboarding
+- Progressindikatorer
+- Mobiloptimering med touch-gester och offline-first
+- Tillgänglighet (tangentbordsnavigering, skärmläsarstöd, visuella hjälpmedel)
+
+**Nyckelprincip:** Systemet ska vara så enkelt att även någon som aldrig använt det tidigare kan sätta upp ett komplett årsmöte på under 30 minuter.
+
+#### 2. ANALYS-OCH-BRISTER.md
+
+**Analys 1: Brister för generella svenska föreningar**
+
+Identifierade brister:
+
+- **Juridiska krav**: Protokollhantering, beslutsmässighet, stadgeändringar, medlemsregister
+- **Kallelse och handlingar**: Kallelsetider, handlingars tillgänglighet, ändringar efter kallelse
+- **Revision och granskning**: Revisorns tillgång, granskningsrapport, ansvarsfrihet
+- **Tillgänglighet**: WCAG 2.1 nivå AA, skärmläsarstöd, tangentbordsnavigering, färgblindhet
+- **Språkstöd**: Språkval, översättningar, blandade språk
+- **Dataskydd**: DPIA, personuppgiftsbiträdesavtal, rätt till radering, dataintrång
+- **Informationssäkerhet**: Säkerhetskopiering, återställning, säkerhetsuppdateringar, incidenthantering
+
+**Analys 2: Brister ur rättssäkerhetsperspektiv**
+
+Identifierade brister:
+
+- **Bevisning och verifierbarhet**: Protokollets rättskraft, ändringar i protokoll, arkivering, verifiering
+- **Revisionsspår och loggning**: Loggningens omfattning, loggars integritet, loggars tillgänglighet, granskning
+- **Matematisk verifierbarhet**: Verifieringsprocess, oberoende verifiering, dokumentation, utbildning
+- **Rättssäkerhet vid tvister**: Definition av valfusk, rapportering, utredning, sanktioner
+- **Omprövning av beslut**: Omprövningsprocess, tidsgränser, beslutsfattare, dokumentation
+- **Rättslig prövning**: Bevisning i domstol, expertutlåtande, kostnader, juridiskt stöd
+- **Transparens och insyn**: Beslutsdokumentation, motivering, tillgång till underlag, publicering
+- **Medlemmars insyn**: Rätt till information, begäran om information, svarstid, avgifter
+
+**Analys 3: Brister specifikt för Mensa Sverige**
+
+Identifierade brister:
+
+- **STV-röstning**: Implementationsdetaljer, oavgjort val, observatörsrätt, publicering av resultat
+- **Valkommitténs roll**: Ansvar vid digital röstning, oberoende rösträkning, förtidsröstning, testning
+- **Ombudsmannens roll**: Tillgång till systemet, granskning av loggar, hantering av klagomål, rapportering
+- **Tekniskt haveri**: Definition av haveri, beslutsbefogenheter, dokumentation, kommunikation
+- **Paragrafryttare och formalia**: Exakt stadgetolkning, tolkningsfrågor, stadgeändringar, dokumentation
+- **Formella krav på mötet**: Mötets öppnande, dagordningens godkännande, röstlängdens fastställande, mötets avslutande
+- **Rösträkningsdetaljer**: Rösträkningens transparens, tidpunkt, presentation av resultat, omräkning
+- **Nordiska Mensastiftelsen**: Bidragsbeslut, fleråriga beslut, uppföljning
+- **Internationella medlemmar**: Autentisering, språkstöd, tidszoner, teknisk support
+- **Rådgivande motioner**: Definition, hantering, uppföljning, rapportering
+- **Testning och kvalitetssäkring**: Testomfattning, testdokumentation, acceptanskriterier, ansvar
+- **Pilottest**: Omfattning, deltagare, utvärdering, tidpunkt
+- **Utvärdering efter första användning**: Utvärderingsprocess, kriterier för återgång, kontinuerlig förbättring, rapportering
+- **Övergångsbestämmelser**: Godkännande, reservrutin, kommunikation, utbildning
+- **Hybridlösning**: Definition, hantering, rättssäkerhet, tidplan
+
+**Sammanfattning och prioritering:**
+
+- **Kritiska brister** (måste åtgärdas före första användning): 8 områden
+- **Viktiga brister** (bör åtgärdas före första användning): 8 områden
+- **Önskvärda förbättringar** (kan åtgärdas efter första användning): 6 områden
+
+**Rekommendationer:**
+
+1. Börja med kritiska brister (rättssäkerhet och säkerhet)
+2. Använd hybridlösning första året
+3. Investera i testning
+4. Dokumentera allt
+5. Lyssna på feedback
+6. Var transparent
+7. Planera för långsiktighet
+
+### Uppdaterade filer
+
+- `doc/krav/README.md` - Lagt till wizard och analys
+- `doc/CHANGELOG-KRAV.md` - Denna uppdatering
+
+### Resultat
+
+- **13 kravdokument** finns nu i `doc/krav/`
+- **Komplett analys** av brister från tre perspektiv
+- **Tydlig prioritering** av vad som måste åtgärdas
+- **Konkreta förslag** på hur brister ska åtgärdas
+
+### Nästa steg
+
+1. **Prioritera kritiska brister**: Fokusera på de 8 kritiska områdena
+2. **Skapa implementationsplan**: Baserat på prioriteringen
+3. **Börja med protokollhantering**: Första kritiska brist att åtgärda
+4. **Implementera STV-algoritm**: Andra kritiska brist att åtgärda
+5. **Säkerhetsgranskning**: Planera oberoende granskning

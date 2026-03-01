@@ -25,7 +25,7 @@
    - Skapa starkt lösenord + aktivera MFA
 
 2. **Föreningsinställningar**
-   - Föreningsnamn: "Mensa Sverige"
+   - Föreningsnamn: "Din Förening"
    - Logotyp: Ladda upp SVG eller PNG
    - Färgtema: Välj från 13+ fördefinierade mallar eller anpassa
    - Språk: Svenska (primär), Engelska (sekundär)
@@ -53,7 +53,9 @@
    - Välj lagringsplats: Lokal disk, NAS, molnlagring
    - Testa återställning från backup
 
-## 2. Fas 2: Förberedelser inför årsmötet (Senast 4 veckor innan)
+## 2. Fas 2: Förberedelser inför årsmötet
+
+Förberedelser ska påbörjas enligt föreningens stadgar (vanligtvis flera veckor före mötet).
 
 ### 2.1 Skapa årsmöte
 
@@ -114,7 +116,9 @@
    - Innehåller: Mötesinfo, Länk till handlingar, Länk till förtidsröstning
    - Påminnelse skickas 1 vecka innan mötet
 
-## 3. Fas 3: Förtidsröstning pågår (4 veckor innan mötet)
+## 3. Fas 3: Förtidsröstning pågår
+
+Förtidsröstning öppnas enligt föreningens stadgar (vanligtvis samtidigt med andra kallelsen).
 
 ### 3.1 Medlemmar loggar in
 

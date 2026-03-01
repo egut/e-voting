@@ -45,7 +45,7 @@ Målet är att göra årsmöten mer engagerande och roliga, samtidigt som system
 
 ### Nivå 4-6: Balanserad (Rekommenderad för de flesta)
 
-**Användning:** Traditionella föreningar, Mensa-föreningar, professionella men vänliga organisationer
+**Användning:** Traditionella föreningar, professionella men vänliga organisationer
 
 **Kännetecken:**
 
@@ -127,14 +127,14 @@ Målet är att göra årsmöten mer engagerande och roliga, samtidigt som system
 
 ### Kategori 2: Balanserade (Nivå 4-6)
 
-#### 4. Mensa Classic (Standard)
+#### 4. Klassisk (Standard)
 
 - **Playfulness:** 4/10
-- **Färger:** Mensa-röd (#DC2626) + Mörk grå (#1F2937)
+- **Färger:** Röd (#DC2626) + Mörk grå (#1F2937)
 - **Typsnitt:** Inter
 - **Rundade hörn:** 8px
-- **Ikoner:** Hjärna, lampa, pussel
-- **Användning:** Mensa-föreningar (standard)
+- **Ikoner:** Klassiska ikoner
+- **Användning:** Traditionella föreningar (standard)
 
 #### 5. Modern Purple
 

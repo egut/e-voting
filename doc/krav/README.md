@@ -127,7 +127,7 @@ Beskriver kostnader:
 Beskriver steg-för-steg-process:
 
 - Fas 1: Plattformsuppsättning (görs en gång)
-- Fas 2: Förberedelser inför årsmötet (4 veckor innan)
+- Fas 2: Förberedelser inför årsmötet (enligt föreningens stadgar)
 - Fas 3: Förtidsröstning pågår
 - Fas 4: Genomförande av årsmötet (live)
 - Fas 5: Efterarbete
@@ -177,6 +177,45 @@ Detaljerad beskrivning av autentiseringsmetoder:
 - Säkerhetsnivå-badges och dashboard
 - Valkommitténs gränssnitt (detaljerat)
 
+### Röstning och valmetoder
+
+**[ROSTNING-OCH-VALMETODER.md](ROSTNING-OCH-VALMETODER.md)**
+
+Detaljerad beskrivning av röstningsmetoder och roller:
+
+- STV-röstning (algoritm, oavgjort val, observatörsrätt, publicering)
+- Andra valmetoder (enkel majoritet, absolut majoritet, kvalificerad majoritet, godkännanderöstning, Schulze)
+- Valkommitténs roll (ansvar, gränssnitt, oberoende rösträkning, testning)
+- Ombudsmannens roll (ansvar, tillgång, granskning, klagomål, rapportering)
+- Formella krav på mötet (öppnande, dagordning, röstlängd, avslutande)
+- Rösträkningsdetaljer (transparens, tidpunkt, presentation, omräkning)
+
+### Wizard och användarvänlighet
+
+**[WIZARD-OCH-ANVANDARVANLIGHET.md](WIZARD-OCH-ANVANDARVANLIGHET.md)**
+
+Beskriver wizards och användarvänlighet:
+
+- Uppsättningswizard för årsmöte (8 steg)
+- Wizards för andra funktioner
+- Inbyggd säkerhet (osynlig för användaren)
+- Kontextuell hjälp och felhantering
+- Onboarding för nya användare
+- Progressindikatorer
+- Mobiloptimering och tillgänglighet
+
+### Analys och brister
+
+**[ANALYS-OCH-BRISTER.md](ANALYS-OCH-BRISTER.md)**
+
+Tre analyser av systemet för att identifiera brister:
+
+- **Analys 1**: Brister för generella svenska föreningar (juridiska krav, tillgänglighet, dataskydd)
+- **Analys 2**: Brister ur rättssäkerhetsperspektiv (bevisning, revisionsspår, transparens)
+- **Analys 3**: Brister för specifika föreningstyper och användningsfall (STV, valkommitté, ombudsman, paragrafryttare)
+- Sammanfattning och prioritering av brister
+- Rekommendationer för implementation
+
 ## Läsguide
 
 ### För beslutsfattare
@@ -206,8 +245,8 @@ Detaljerad beskrivning av autentiseringsmetoder:
 
 ## Status
 
-- ✅ Funktionella krav: Komplett
-- ✅ Prestanda och tekniska krav: Komplett
+- ✅ Funktionella krav: Komplett (uppdaterad med protokoll, datadump, API, dashboard, LLM-konfiguration, rådgivande motioner)
+- ✅ Prestanda och tekniska krav: Komplett (uppdaterad med loggning, livscykel, GDPR, testning med LLM-personas)
 - ✅ Säkerhet och kryptering: Komplett
 - ✅ Autentisering och medlemsregister: Komplett
 - ✅ Infrastruktur och hosting: Komplett
@@ -218,13 +257,17 @@ Detaljerad beskrivning av autentiseringsmetoder:
 - ✅ UI/UX-krav: Komplett
 - ✅ Playfulness och teman: Komplett
 - ✅ Autentisering (detaljerad): Komplett
+- ✅ Röstning och valmetoder: Komplett (STV, valkommitté, ombudsman, formella krav)
+- ✅ Wizard och användarvänlighet: Komplett
+- ✅ Analys och brister: Komplett
 
 ## Nästa steg
 
-- ⏳ GDPR-analys och DPIA (behöver kompletteras)
-- ⏳ API-specifikation (behöver skapas)
-- ⏳ Databasschema (behöver skapas)
-- ⏳ Kryptografisk implementation (behöver detaljeras)
+- ⏳ Generalisera alla krav (ta bort föreningsspecifika detaljer)
+- ⏳ API-specifikation (OpenAPI/Swagger)
+- ⏳ Databasschema
+- ⏳ Kryptografisk implementation
+- ⏳ Implementation av identifierade brister från analysen
 
 ## Bidra
 
