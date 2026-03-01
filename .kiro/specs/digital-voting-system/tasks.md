@@ -91,41 +91,41 @@ This phase establishes the foundational security infrastructure and basic voting
     - Implement documents and document_versions tables
     - _Requirements: 17.6, 17.7_
 
-- [~] 4. Implement Authentication Module
-  - [ ] 4.1 Create authentication service with session management
+- [x] 4. Implement Authentication Module
+  - [x] 4.1 Create authentication service with session management
     - Implement session creation, validation, and revocation
     - Implement security level assignment based on auth method
     - Store sessions in database with expiration
     - _Requirements: 5.1, 5.5_
 
-  - [ ] 4.2 Implement Freja eID+ authentication
+  - [x] 4.2 Implement Freja eID+ authentication
     - Integrate with Freja eID+ API for Swedish personal number verification
     - Assign "Very High" security level for API integration
     - Handle authentication failures gracefully
     - _Requirements: 5.1, 5.6, 25.2_
 
-  - [ ] 4.3 Implement Magic Link authentication
+  - [x] 4.3 Implement Magic Link authentication
     - Generate secure magic link tokens with expiration
     - Send magic links via email service
     - Verify tokens and create sessions
     - Assign security level based on member register integration
     - _Requirements: 5.3, 25.4_
 
-  - [ ] 4.4 Implement member status verification
+  - [x] 4.4 Implement member status verification
     - Check member status is "active" before allowing authentication
     - Support CSV, API, and LDAP member register integration
     - Validate imported member data for format and duplicates
     - _Requirements: 6.1, 6.2, 6.3, 6.5, 6.6_
 
-  - [ ] 4.5 Write property test for inactive member rejection
+  - [x] 4.5 Write property test for inactive member rejection
     - **Property 8: Inactive Member Authentication Rejection**
     - **Validates: Requirements 6.5**
 
-  - [ ] 4.6 Write property test for member data validation
+  - [x] 4.6 Write property test for member data validation
     - **Property 9: Member Data Validation**
     - **Validates: Requirements 6.6**
 
-  - [ ] 4.7 Write property test for security badge assignment
+  - [x] 4.7 Write property test for security badge assignment
     - **Property 18: Security Badge Assignment**
     - **Validates: Requirements 25.1-25.6**
 
