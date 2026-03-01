@@ -129,7 +129,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - **Property 18: Security Badge Assignment**
     - **Validates: Requirements 25.1-25.6**
 
-- [~] 5. Checkpoint - Ensure authentication and crypto tests pass
+- [-] 5. Checkpoint - Ensure authentication and crypto tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 - [~] 6. Implement Voting Module

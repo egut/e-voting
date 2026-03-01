@@ -27,6 +27,13 @@ const mockRateLimiter = {
   recordAttempt: jest.fn(),
 };
 
+const mockMagicLinkRepo = {
+  store: jest.fn(),
+  findByToken: jest.fn(),
+  markAsUsed: jest.fn(),
+  cleanupExpired: jest.fn(),
+};
+
 describe('AuthenticationService', () => {
   let authService: AuthenticationService;
 
@@ -37,6 +44,7 @@ describe('AuthenticationService', () => {
       mockMemberRepo as any,
       mockCryptoEngine as any,
       mockRateLimiter as any,
+      mockMagicLinkRepo as any,
       MemberRegisterType.API
     );
   });
