@@ -2,5 +2,9 @@
   "kiroAgent.configureMCP": "Enabled",
   "cSpell.language": "sv,en",
   "cSpell.dictionaries": ["sv", "en"],
-  "cSpell.enabledLanguageIds": ["markdown", "plaintext", "text"]
+  "cSpell.enabledLanguageIds": [
+    "markdown",
+    "plaintext",
+    "text"
+  ]
 }

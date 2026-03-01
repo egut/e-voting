@@ -11,7 +11,7 @@ Each task references specific requirements from the requirements document and in
 After completing each task (including implementation, tests, documentation, and code quality checks):
 
 1. Run all tests: `npm test` (backend) and `npm run test` (frontend)
-2. Run code quality checks: `trunk check` and `trunk fmt`
+2. Run code quality checks: `trunk check --fix` and `trunk fmt`
 3. Verify test coverage meets requirements (>95% for critical code, >70% for standard code)
 4. Stage changes: `git add .`
 5. Commit with descriptive message: `git commit -m "feat: [task-number] [task-description]"`
@@ -25,7 +25,7 @@ This ensures each task is a complete, tested, and documented unit of work with f
 
 This phase establishes the foundational security infrastructure and basic voting capabilities. All cryptographic operations, authentication, and vote handling must be implemented with the highest security standards.
 
-- [ ] 1. Set up project structure and development environment
+- [x] 1. Set up project structure and development environment
   - Create monorepo structure with backend/, frontend/, and infrastructure/ directories
   - Configure TypeScript for both backend and frontend
   - Set up Docker Compose with PostgreSQL, Redis, and Caddy
@@ -33,43 +33,43 @@ This phase establishes the foundational security infrastructure and basic voting
   - Set up CI/CD pipeline with GitHub Actions
   - _Requirements: 21.1, 21.2_
 
-- [ ] 2. Implement Crypto Engine with blind signatures
-  - [ ] 2.1 Create core cryptographic interfaces and types
+- [x] 2. Implement Crypto Engine with blind signatures
+  - [x] 2.1 Create core cryptographic interfaces and types
     - Define TypeScript interfaces for BlindToken, EncryptedVote, KeyPair, Receipt
     - Implement key generation using Node.js crypto module (RSA-4096 minimum)
     - _Requirements: 1.4, 16.1, 16.2_
 
-  - [ ] 2.2 Implement blind signature protocol
+  - [x] 2.2 Implement blind signature protocol
     - Implement RSA blind signature generation using Node.js crypto
     - Implement signature verification without identity linkage
     - Ensure blinding factor remains client-side only
     - _Requirements: 1.2, 1.5_
 
-  - [ ] 2.3 Write property test for blind signature unlinkability
+  - [x] 2.3 Write property test for blind signature unlinkability
     - **Property 1: Blind Signature Unlinkability**
     - **Validates: Requirements 1.2**
 
-  - [ ] 2.4 Implement ballot box encryption/decryption
+  - [x] 2.4 Implement ballot box encryption/decryption
     - Implement vote encryption with chair's public key (RSA-4096)
     - Implement batch decryption after voting closes
     - Handle decryption failures with recovery options
     - _Requirements: 2.1, 2.4, 2.5_
 
-  - [ ] 2.5 Write property test for vote encryption during open voting
+  - [x] 2.5 Write property test for vote encryption during open voting
     - **Property 2: Vote Encryption During Open Voting**
     - **Validates: Requirements 2.1, 2.2**
 
-  - [ ] 2.6 Implement receipt code generation and verification
+  - [x] 2.6 Implement receipt code generation and verification
     - Generate unique receipt codes using cryptographic hash
     - Implement receipt verification against published vote list
     - _Requirements: 3.1, 3.2, 3.4_
 
-  - [ ] 2.7 Write property tests for receipt codes
+  - [x] 2.7 Write property tests for receipt codes
     - **Property 4: Receipt Code Uniqueness**
     - **Property 5: Receipt Verification**
     - **Validates: Requirements 3.1, 3.4**
 
-- [ ] 3. Implement database schema and models
+- [-] 3. Implement database schema and models
   - [ ] 3.1 Create core database tables
     - Implement members table with security_level and status fields
     - Implement auth_sessions table with session management
@@ -91,7 +91,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - Implement documents and document_versions tables
     - _Requirements: 17.6, 17.7_
 
-- [ ] 4. Implement Authentication Module
+- [~] 4. Implement Authentication Module
   - [ ] 4.1 Create authentication service with session management
     - Implement session creation, validation, and revocation
     - Implement security level assignment based on auth method
@@ -129,10 +129,10 @@ This phase establishes the foundational security infrastructure and basic voting
     - **Property 18: Security Badge Assignment**
     - **Validates: Requirements 25.1-25.6**
 
-- [ ] 5. Checkpoint - Ensure authentication and crypto tests pass
+- [~] 5. Checkpoint - Ensure authentication and crypto tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 6. Implement Voting Module
+- [~] 6. Implement Voting Module
   - [ ] 6.1 Create voting session management
     - Implement openVoting, closeVoting, extendVoting functions
     - Store voting configuration (method, quorum, options)
@@ -204,7 +204,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - **Property 3: Vote Counting After Decryption**
     - **Validates: Requirements 2.4**
 
-- [ ] 7. Implement Audit Logger
+- [~] 7. Implement Audit Logger
   - [ ] 7.1 Create audit logging service with cryptographic chain
     - Implement append-only log structure
     - Calculate hash of each entry including previous hash
@@ -239,7 +239,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - Provide data export for member requests
     - _Requirements: 23.4, 23.6, 23.7_
 
-- [ ] 8. Implement REST API endpoints for Phase 1
+- [~] 8. Implement REST API endpoints for Phase 1
   - [ ] 8.1 Create authentication endpoints
     - POST /api/v1/auth/freja - Freja eID+ authentication
     - POST /api/v1/auth/magic-link - Request magic link
@@ -271,7 +271,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - Implement rate limiting to prevent abuse
     - _Requirements: 22.2_
 
-- [ ] 9. Implement basic frontend (React PWA)
+- [~] 9. Implement basic frontend (React PWA)
   - [ ] 9.1 Set up React project with PWA configuration
     - Configure Create React App or Vite with PWA plugin
     - Set up service worker for offline support
@@ -308,7 +308,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - Test on various screen sizes
     - _Requirements: 18.9, 18.10_
 
-- [ ] 10. Checkpoint - Ensure Phase 1 integration tests pass
+- [~] 10. Checkpoint - Ensure Phase 1 integration tests pass
   - Run complete voting flow from authentication to results
   - Test vote changes and receipt verification
   - Verify audit logging captures all events
@@ -318,7 +318,7 @@ This phase establishes the foundational security infrastructure and basic voting
 
 This phase adds meeting orchestration, document handling, and protocol generation capabilities.
 
-- [ ] 11. Implement Meeting and Agenda Management
+- [~] 11. Implement Meeting and Agenda Management
   - [ ] 11.1 Create meeting management service
     - Implement meeting creation with type (annual/extraordinary)
     - Implement meeting start, pause, and close functions
@@ -344,7 +344,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
     - Test pause and resume functionality
     - Test agenda item progression
 
-- [ ] 12. Implement Document Manager
+- [~] 12. Implement Document Manager
   - [ ] 12.1 Create document upload and storage
     - Accept PDF, DOCX, DOC, MD, JPG, PNG, WebP formats
     - Store original files in file system or object storage
@@ -376,7 +376,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
     - **Property 13: Document Conversion Round-Trip**
     - **Validates: Requirements 10.6, 10.7, 10.8, 10.9**
 
-- [ ] 13. Implement Protocol Generator
+- [~] 13. Implement Protocol Generator
   - [ ] 13.1 Create protocol structure generation
     - Generate protocol from meeting and agenda data
     - Include opening (time, place, chair, secretary, adjusters)
@@ -417,7 +417,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
     - Test decision numbering and categorization
     - Test protocol export in all formats
 
-- [ ] 14. Implement Data Dump and Recovery
+- [~] 14. Implement Data Dump and Recovery
   - [ ] 14.1 Create data dump functionality
     - Export all meeting data to JSON format
     - Include members, votes, agenda, documents, configuration
@@ -442,7 +442,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
     - **Property 14: Data Dump Round-Trip**
     - **Validates: Requirements 13.1, 13.2, 13.7**
 
-- [ ] 15. Implement API endpoints for Phase 2
+- [~] 15. Implement API endpoints for Phase 2
   - [ ] 15.1 Create meeting endpoints
     - GET /api/v1/meetings - List meetings
     - POST /api/v1/meetings - Create meeting
@@ -474,7 +474,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
     - POST /api/v1/system/restore - Restore from dump
     - _Requirements: 13.1, 13.4_
 
-- [ ] 16. Implement frontend for Phase 2
+- [~] 16. Implement frontend for Phase 2
   - [ ] 16.1 Create meeting management UI
     - Meeting creation form with configuration
     - Meeting control panel (start, pause, close)
@@ -496,7 +496,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
     - Protocol export with format selection
     - _Requirements: 11.5, 12.1, 12.5_
 
-- [ ] 17. Checkpoint - Ensure Phase 2 integration tests pass
+- [~] 17. Checkpoint - Ensure Phase 2 integration tests pass
   - Test complete meeting with documents and protocol
   - Test data dump and restoration
   - Verify protocol generation accuracy
@@ -506,7 +506,7 @@ This phase adds meeting orchestration, document handling, and protocol generatio
 
 This phase adds additional voting methods, authentication options, real-time features, and election committee tools.
 
-- [ ] 18. Implement additional voting methods
+- [~] 18. Implement additional voting methods
   - [ ] 18.1 Implement Schulze method (Condorcet)
     - Parse pairwise candidate preferences
     - Calculate strongest paths between candidates
@@ -526,7 +526,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Test Approval Voting correctness
     - Test edge cases (ties, single candidate, etc.)
 
-- [ ] 19. Implement additional authentication methods
+- [~] 19. Implement additional authentication methods
   - [ ] 19.1 Implement SSO authentication
     - Integrate with Active Directory via LDAP
     - Integrate with Entra ID (Azure AD) via OAuth
@@ -548,7 +548,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Assign appropriate security level
     - _Requirements: 5.5, 25.4, 25.6_
 
-- [ ] 20. Implement real-time dashboard and WebSocket
+- [~] 20. Implement real-time dashboard and WebSocket
   - [ ] 20.1 Set up WebSocket server
     - Configure WebSocket endpoint
     - Implement channel subscription (meeting, voting, dashboard)
@@ -576,7 +576,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Display metrics to technical administrators
     - _Requirements: 26.8_
 
-- [ ] 21. Implement Election Committee interface
+- [~] 21. Implement Election Committee interface
   - [ ] 21.1 Create member approval interface
     - Display pending member approvals with details
     - Show member name, number, email, country, request date
@@ -598,7 +598,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Export security report
     - _Requirements: 25.7, 25.8_
 
-- [ ] 22. Implement Candidate Management
+- [~] 22. Implement Candidate Management
   - [ ] 22.1 Create candidate management interface
     - Form for adding candidates with all fields
     - Image upload with cropping tool
@@ -618,7 +618,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Support responsive layout for all screen sizes
     - _Requirements: 30.7_
 
-- [ ] 23. Implement Web Application Firewall
+- [~] 23. Implement Web Application Firewall
   - [ ] 23.1 Configure Caddy WAF in Docker stack
     - Set up Caddy as reverse proxy
     - Configure automatic HTTPS with Let's Encrypt
@@ -643,7 +643,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Enable DDoS protection
     - _Requirements: 22.5, 22.6_
 
-- [ ] 24. Implement performance optimizations
+- [~] 24. Implement performance optimizations
   - [ ] 24.1 Add database query optimization
     - Review and optimize all queries
     - Add missing indexes
@@ -670,7 +670,7 @@ This phase adds additional voting methods, authentication options, real-time fea
     - Verify response times under load
     - _Requirements: 15.1, 15.2, 15.3_
 
-- [ ] 25. Checkpoint - Ensure Phase 3 integration tests pass
+- [~] 25. Checkpoint - Ensure Phase 3 integration tests pass
   - Test all voting methods (Simple, STV, Schulze, Approval)
   - Test all authentication methods
   - Test real-time dashboard updates
@@ -681,7 +681,7 @@ This phase adds additional voting methods, authentication options, real-time fea
 
 This phase adds internationalization, configuration tools, advisory motions, and production documentation.
 
-- [ ] 26. Implement multi-language support (i18n)
+- [~] 26. Implement multi-language support (i18n)
   - [ ] 26.1 Set up i18n framework
     - Configure i18next for React frontend
     - Configure i18n for backend error messages
@@ -721,7 +721,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - **Property 16: Vote Data Round-Trip**
     - **Validates: Requirements 34.6**
 
-- [ ] 27. Implement white-label configuration
+- [~] 27. Implement white-label configuration
   - [ ] 27.1 Create configuration system
     - Define configuration schema (YAML or JSON)
     - Support organization name, logo, colors
@@ -742,7 +742,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Support version control of config files
     - _Requirements: 20.5, 20.6, 20.7_
 
-- [ ] 28. Implement LLM-assisted configuration wizard
+- [~] 28. Implement LLM-assisted configuration wizard
   - [ ] 28.1 Create configuration wizard UI
     - Step-by-step wizard interface
     - Bylaws upload (PDF or Word)
@@ -775,7 +775,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Generate structured configuration output
     - _Requirements: 29.1, 29.6_
 
-- [ ] 29. Implement advisory motions and "Other Business"
+- [~] 29. Implement advisory motions and "Other Business"
   - [ ] 29.1 Create motion submission interface
     - Markdown editor with preview for motion writing
     - Templates for common motion types
@@ -801,7 +801,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Support voting on other business items
     - _Requirements: 28.10_
 
-- [ ] 30. Implement automatic reminders and notifications
+- [~] 30. Implement automatic reminders and notifications
   - [ ] 30.1 Create notification system
     - Email service integration
     - Template system for notifications
@@ -820,7 +820,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Send reminder before pre-voting closes
     - _Requirements: 32.4_
 
-- [ ] 31. Create transparency and security documentation
+- [~] 31. Create transparency and security documentation
   - [ ] 31.1 Create transparency page
     - Design /transparency page layout
     - Explain system architecture in accessible language
@@ -847,7 +847,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Include version and date in PDFs
     - _Requirements: 27.10_
 
-- [ ] 32. Implement audit log export and verification
+- [~] 32. Implement audit log export and verification
   - [ ] 32.1 Create audit log export
     - Export logs in JSON format
     - Export logs in CSV format
@@ -866,7 +866,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Export functionality for auditors
     - _Requirements: 17.8_
 
-- [ ] 33. Complete accessibility compliance
+- [~] 33. Complete accessibility compliance
   - [ ] 33.1 Run automated accessibility tests
     - Run axe-core tests on all pages
     - Run Pa11y in CI/CD pipeline
@@ -889,7 +889,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Document screen reader support
     - Provide contact for accessibility issues
 
-- [ ] 34. Create deployment documentation
+- [~] 34. Create deployment documentation
   - [ ] 34.1 Write installation guide
     - Document system requirements
     - Document Docker installation steps
@@ -925,7 +925,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Election committee guide
     - Secretary guide for protocol generation
 
-- [ ] 35. Implement dependency management
+- [~] 35. Implement dependency management
   - [ ] 35.1 Create DEPENDENCIES.md
     - Document all external libraries
     - Include name, version, license, purpose
@@ -944,7 +944,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Set up automated dependency scanning
     - _Requirements: 16.5, 16.6_
 
-- [ ] 36. Conduct security testing
+- [~] 36. Conduct security testing
   - [ ] 36.1 Run automated security scans
     - Run npm audit / yarn audit
     - Run Snyk for dependency vulnerabilities
@@ -974,7 +974,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Complete Data Protection Impact Assessment (DPIA)
     - _Requirements: 23.1-23.9_
 
-- [ ] 37. Conduct pilot testing
+- [~] 37. Conduct pilot testing
   - [ ] 37.1 Prepare pilot test environment
     - Set up production-like environment
     - Create test meeting with realistic agenda
@@ -1002,7 +1002,7 @@ This phase adds internationalization, configuration tools, advisory motions, and
     - Optimize performance bottlenecks
     - Update documentation based on findings
 
-- [ ] 38. Final checkpoint - Production readiness review
+- [~] 38. Final checkpoint - Production readiness review
   - Verify all critical tests pass (>95% coverage)
   - Verify all standard tests pass (>70% coverage)
   - Verify all security scans pass

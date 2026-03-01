@@ -53,7 +53,7 @@ npm test          # or pytest, go test
 npm run test:coverage
 
 # Linting and formatting
-trunk check       # Run all linters
+trunk check --fix      # Run all linters
 trunk fmt         # Format code
 
 # Database migrations

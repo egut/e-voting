@@ -1,0 +1,77 @@
+# Caddy configuration for Digital Voting System
+# Provides reverse proxy, automatic HTTPS, and basic WAF protection
+
+{
+    # Global options
+    admin off
+    auto_https off  # Set to 'on' in production with real domain
+}
+
+# Development configuration (localhost)
+:80 {
+    # Rate limiting
+    rate_limit {
+        zone voting {
+            key {remote_host}
+            events 100
+            window 1m
+        }
+    }
+
+    # Security headers
+    header {
+        # Prevent clickjacking
+        X-Frame-Options "SAMEORIGIN"
+        # Prevent MIME type sniffing
+        X-Content-Type-Options "nosniff"
+        # XSS protection
+        X-XSS-Protection "1; mode=block"
+        # Referrer policy
+        Referrer-Policy "strict-origin-when-cross-origin"
+        # Remove server header
+        -Server
+    }
+
+    # API routes to backend
+    handle /api/* {
+        reverse_proxy backend:3000 {
+            # Health check
+            health_uri /health
+            health_interval 30s
+            health_timeout 10s
+
+            # Headers
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # WebSocket support for real-time updates
+    handle /ws/* {
+        reverse_proxy backend:3000 {
+            header_up Upgrade {http.request.header.Upgrade}
+            header_up Connection {http.request.header.Connection}
+        }
+    }
+
+    # Frontend SPA
+    handle /* {
+        reverse_proxy frontend:80
+    }
+
+    # Logging
+    log {
+        output file /var/log/caddy/access.log
+        format json
+    }
+}
+
+# Production configuration (uncomment and configure for production)
+# voting.example.com {
+#     # Automatic HTTPS with Let's Encrypt
+#     tls your-email@example.com
+#
+#     # Same configuration as above
+#     # ...
+# }

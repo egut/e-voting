@@ -23,6 +23,15 @@ lint:
     - prettier@3.8.1
     - trufflehog@3.93.6
     - yamllint@1.38.0
+  ignore:
+    - linters: [checkov]
+      paths:
+        - .github/workflows/ci.yml # Test credentials in CI
+        - infrastructure/docker-compose.yml # Development credentials only
+    - linters: [yamllint]
+      paths:
+        - .github/workflows/ci.yml # GitHub Actions style
+        - infrastructure/docker-compose.yml # Docker Compose style
 actions:
   enabled:
     - trunk-announce
