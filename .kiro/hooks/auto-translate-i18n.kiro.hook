@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "name": "Auto-translate Localization Files",
+  "description": "Monitors changes to localization files (JSON, YAML) and automatically generates translations for all configured target languages while maintaining context and locale conventions",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/i18n/**/*.json",
+      "**/locales/**/*.json",
+      "**/lang/**/*.json",
+      "**/translations/**/*.json",
+      "**/i18n/**/*.yaml",
+      "**/locales/**/*.yaml",
+      "**/lang/**/*.yaml",
+      "**/translations/**/*.yaml"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A localization file has been modified. Please:\n1. Identify new or changed text entries in the file\n2. Detect the source language (likely Swedish or English based on project requirements)\n3. Generate accurate translations for the target language(s) - Swedish and English are required\n4. Maintain proper context, tone, and locale-specific conventions\n5. Update corresponding translation files with the new translations\n6. Preserve existing translations that haven't changed\n7. Ensure JSON/YAML structure and formatting remain consistent"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Check Code Quality After Task",
+  "description": "After a spec task is completed, runs trunk check to identify code quality issues and prompts the agent to fix any linting errors, security issues, or code quality problems found.",
+  "version": "1",
+  "when": {
+    "type": "postTaskExecution"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A task has been completed. Run trunk check to identify any code quality issues, linting errors, security vulnerabilities, or formatting problems. Then fix all issues found to ensure the code meets quality standards."
+  }
+}

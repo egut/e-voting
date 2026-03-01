@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "code-index": {
+      "command": "uvx",
+      "args": ["code-index-mcp"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "set_project_path",
+        "search_code_advanced",
+        "find_files",
+        "get_file_summary",
+        "get_symbol_body",
+        "refresh_index",
+        "build_deep_index"
+      ],
+      "description": "Kodindexering och analys - viktigt för stor kodbas"
+    },
+    "eslint": {
+      "command": "npx",
+      "args": ["-y", "@eslint/mcp@latest"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": ["lint_file", "fix_file", "get_rule_docs"],
+      "description": "ESLint linter för JS/TS - säkerställer kodkvalitet"
+    },
+    "security-audit": {
+      "command": "npx",
+      "args": ["-y", "mcp-security-audit"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": ["audit_dependencies", "audit_nodejs_dependencies"],
+      "description": "Sårbarhetsskanning för npm-beroenden - KRITISKT för säkerhetskrav (minimera beroenden)"
+    },
+    "playwright-testing": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": [
+        "browser_navigate",
+        "browser_screenshot",
+        "browser_click",
+        "browser_fill"
+      ],
+      "description": "E2E-testning - krävs för >95% kodtäckning av kritisk kod"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest", "--headless"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": [
+        "navigate_page",
+        "take_screenshot",
+        "evaluate_script",
+        "performance_start_trace",
+        "performance_stop_trace"
+      ],
+      "description": "Prestandatestning - API-responstid <150ms krävs för röstning"
+    }
+  }
+}

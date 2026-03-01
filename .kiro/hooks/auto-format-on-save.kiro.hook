@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Auto Format on Save",
+  "description": "Automatically formats any file using trunk fmt when it is saved, ensuring consistent code style across the project.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*"
+    ]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "trunk fmt"
+  }
+}
