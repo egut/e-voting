@@ -6,3 +6,6 @@ MD040: false
 
 # Disable MD026 (trailing punctuation in heading)
 MD026: false
+
+# Disable MD024 (Multiple headings with the same content)
+MD024: false
