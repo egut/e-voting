@@ -69,15 +69,15 @@ This phase establishes the foundational security infrastructure and basic voting
     - **Property 5: Receipt Verification**
     - **Validates: Requirements 3.1, 3.4**
 
-- [-] 3. Implement database schema and models
-  - [ ] 3.1 Create core database tables
+- [x] 3. Implement database schema and models
+  - [x] 3.1 Create core database tables
     - Implement members table with security_level and status fields
     - Implement auth_sessions table with session management
     - Implement blind_tokens table (NO foreign key to members)
     - Implement meetings and agenda_items tables
     - _Requirements: 1.1, 6.7_
 
-  - [ ] 3.2 Create voting-related tables
+  - [x] 3.2 Create voting-related tables
     - Implement voting_sessions table with quorum configuration
     - Implement encrypted_votes table (NO foreign key to members, only blind_token_hash)
     - Implement decrypted_votes table for post-voting storage
@@ -85,7 +85,7 @@ This phase establishes the foundational security infrastructure and basic voting
     - Add indexes for performance optimization
     - _Requirements: 1.1, 8.1, 15.5_
 
-  - [ ] 3.3 Create audit and protocol tables
+  - [x] 3.3 Create audit and protocol tables
     - Implement audit_log table with append-only structure and cryptographic chain
     - Implement protocols and protocol_signatures tables
     - Implement documents and document_versions tables
